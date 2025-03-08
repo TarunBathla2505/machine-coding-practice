@@ -1,0 +1,67 @@
+[
+  {
+    "id":1,
+    "name":"public",
+    "isFolder": true,
+    "children":[]
+  },
+  {
+    "id":2,
+    "name":"src",
+    "isFolder": true,
+    "children":[
+      {
+        "id":3,
+        "name":"asset",
+        "isFolder": true,
+        "children":[]
+      },
+      {
+        "id":4,
+        "name":"components",
+        "isFolder": true,
+        "children":[
+          {
+            "id":5,
+            "name":"fileExplorer",
+            "isFolder": true,
+            "children":[
+              {
+                "id":6,
+                "name":"fileExplorer.jsx",
+                "isFolder": false
+              }
+            ]
+          },
+          {
+            "id":7,
+            "name":"progressBar",
+            "isFolder": true,
+            "children":[
+              {
+                "id":8,
+                "name":"progressBar.jsx",
+                "isFolder": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id":9,
+        "name":"App.jsx",
+        "isFolder": false
+      },
+      {
+        "id":10,
+        "name":"App.css",
+        "isFolder": false
+      }
+    ]
+  },
+  {
+    "id":11,
+    "name":"package.json",
+    "isFolder": false
+  }
+]
