@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import json from "./data.json";
 import "./FileExplorer.css";
 
-const List = ({ list, addFolder }) => {
+const List = ({ list, addFolder, deleteFileOrFolder }) => {
   const [isOpen, setIsOpen] = useState({});
   return (
     <div className="container2">
@@ -29,8 +29,20 @@ const List = ({ list, addFolder }) => {
                 onClick={() => addFolder(node.id)}
               />
             )}
+
+            <img
+              className="delete"
+              src="https://as1.ftcdn.net/jpg/11/74/04/76/1000_F_1174047600_GCOSR1l91ZDovtcEOKcT0SToIt9uZByx.jpg"
+              alt="delete file"
+              onClick={() => deleteFileOrFolder(node.id)}
+            />
+
             {node?.children && isOpen[node.name] && (
-              <List list={node.children} addFolder={addFolder} />
+              <List
+                list={node.children}
+                addFolder={addFolder}
+                deleteFileOrFolder={deleteFileOrFolder}
+              />
             )}
           </div>
         );
@@ -72,13 +84,31 @@ export default function FileExplorer() {
     };
 
     setData((prev) => updateData(prev));
-    console.log(data);
+  };
+
+  const deleteFileOrFolder = (elementId) => {
+    const deleteElement = (list) => {
+      return list
+        .filter((node) => node.id !== elementId)
+        .map((node) => {
+          if (node.children) {
+            return { ...node, children: deleteElement(node.children) };
+          }
+          return node;
+        });
+    };
+
+    setData((prev) => deleteElement(prev));
   };
 
   return (
     <div className="container">
       <h1>File Explorer</h1>
-      <List list={data} addFolder={addFolder} />
+      <List
+        list={data}
+        addFolder={addFolder}
+        deleteFileOrFolder={deleteFileOrFolder}
+      />
     </div>
   );
 }
