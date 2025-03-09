@@ -1,6 +1,7 @@
 import "./App.css";
 import AutoCompleteSeachBar from "./components/AutocompleteSearchBar/AutoCompleteSearchBar.jsx";
 import FileExplorer from "./components/fileExplorer/FileExplorer.jsx";
+import Pagination from "./components/pagination/Pagination.jsx";
 import ProgressBar from "./components/progressBar/ProgressBar.jsx";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <ProgressBar />
       <FileExplorer />
       <AutoCompleteSeachBar />
+      <Pagination />
     </>
   );
 }
