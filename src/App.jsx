@@ -3,10 +3,12 @@ import AutoCompleteSeachBar from "./components/AutocompleteSearchBar/AutoComplet
 import FileExplorer from "./components/fileExplorer/FileExplorer.jsx";
 import Pagination from "./components/pagination/Pagination.jsx";
 import ProgressBar from "./components/progressBar/ProgressBar.jsx";
+import TabForm from "./components/tabform/TabForm.jsx";
 
 function App() {
   return (
     <>
+      <TabForm />
       <ProgressBar />
       <FileExplorer />
       <AutoCompleteSeachBar />

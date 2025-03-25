@@ -1,0 +1,45 @@
+.tab-form-container {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  justify-content: space-between;
+}
+
+.tab-form-item{
+  border: 1px solid black;
+  width: 100%;
+  height: 35px;
+  padding-top: 10px;
+  text-align: center;
+  margin: 0px;
+  font-size: large;
+  font-weight: 700;
+}
+
+.tab-form-item-active{
+  border: 1px solid black;
+  width: 100%;
+  height: 35px;
+  padding-top: 10px;
+  text-align: center;
+  margin: 0px;
+  font-size: large;
+  font-weight: 700;
+  background-color: green;
+}
+
+.tab-form-item:hover {
+  background-color: beige;
+  cursor: pointer;
+}
+
+.form {
+  width: 500px;
+  border: 1px solid black;
+  height: 200px;
+}
+
+.form-tabs{
+  padding: 20px;
+}
+
