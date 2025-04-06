@@ -1,0 +1,15 @@
+.otp-input{
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+  text-align: center;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.otp-container{
+  width: fit-content;
+  border-radius: 10px;
+  /* border: 1px solid black; */
+  overflow: hidden;
+}
